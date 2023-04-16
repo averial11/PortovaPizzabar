@@ -10,7 +10,7 @@
 	width: 100%;
 	transform: translateX(100%);
 	transition: .5s cubic-bezier(0.55, 0.085, 0.68, 0.53);
-	background-color: $main-color;
+	background-color: $nav-color;
 	z-index: 100;
 
 	&--active {

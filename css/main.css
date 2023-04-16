@@ -82,7 +82,7 @@ body {
           transform: translateX(100%);
   -webkit-transition: 0.5s cubic-bezier(0.55, 0.085, 0.68, 0.53);
   transition: 0.5s cubic-bezier(0.55, 0.085, 0.68, 0.53);
-  background-color: #283618;
+  background-color: #1D3106;
   z-index: 100;
 }
 .nav--active {
