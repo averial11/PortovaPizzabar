@@ -1,0 +1,57 @@
+@use './colors' as *;
+
+.nav {
+	position: fixed;
+	top: 0;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	height: 100vh;
+	width: 100%;
+	transform: translateX(100%);
+	transition: .5s cubic-bezier(0.55, 0.085, 0.68, 0.53);
+	background-color: $main-color;
+	z-index: 100;
+
+	&--active {
+		transform: translateX(0);
+	}
+
+	&__item {
+		position: relative;
+		display: block;
+		color: $pure-white;
+		text-align: center;
+		margin: 0.5em 0;
+		padding: 0.5em 2em;
+		font-size: 2.8rem;
+		text-decoration: none;
+		&::before {
+			position: absolute;
+			bottom: 0;
+			left: 0;
+			width: 100%;
+			height: 3px;
+			transform: scaleX(0);
+			background-color: $pure-white;
+			transition: transform 0.3s;
+			content: '';
+		}
+		&:hover::before {
+			transform: scaleX(1);
+		}
+	}
+}
+
+@keyframes navItemsAnimation {
+	from {
+		transform: translateX(200%);
+	}
+	to {
+		transform: translateX(0);
+	}
+}
+
+.nav-items-animation {
+    animation: navItemsAnimation 1.5s both;
+}
