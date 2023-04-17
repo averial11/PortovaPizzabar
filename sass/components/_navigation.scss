@@ -10,7 +10,7 @@
 	width: 100%;
 	transform: translateX(100%);
 	transition: .5s cubic-bezier(0.55, 0.085, 0.68, 0.53);
-	background-color: $nav-color;
+	background-color: $main-color;
 	z-index: 100;
 
 	&--active {
@@ -41,6 +41,22 @@
 			transform: scaleX(1);
 		}
 	}
+}
+
+.nav-desktop{
+    position: absolute;
+    top: 0;
+    padding: 2em;
+    right: 0;
+    &__item{
+        padding: 1em;
+        text-decoration: none;
+        color: $pure-white;
+        transition: color .3s;
+        &:hover{
+            color: $pure-white-hover;
+        }
+    }
 }
 
 @keyframes navItemsAnimation {
