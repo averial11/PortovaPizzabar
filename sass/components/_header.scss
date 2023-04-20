@@ -2,23 +2,22 @@
 @use './mixins' as *;
 
 .header {
-    position: relative;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    padding: 2em;
-    height: 100vh;
-    text-align: center;
-    color: $pure-white;
-    @include heroImages('/img/pizza-big.jpg');
-  &__heading {
-    font-family: 'IBM Plex Serif', sans-serif;
-    font-size: 4.8rem;
-
-  }
-  &__text{
-    font-size: 2rem;
-    font-weight: 300;
-  }
+	position: relative;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+	padding: 2em;
+	height: 100vh;
+	text-align: center;
+	color: $pure-white;
+	@include heroImages('/img/pizza-sm.jpg');
+	&__heading {
+		font-family: 'IBM Plex Serif', sans-serif;
+		font-size: 4.8rem;
+	}
+	&__text {
+		font-size: 2rem;
+		font-weight: 300;
+	}
 }

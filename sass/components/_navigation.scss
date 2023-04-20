@@ -45,9 +45,11 @@
 
 .nav-desktop{
     position: absolute;
+    display: none;
     top: 0;
     padding: 2em;
     right: 0;
+    font-size: 2rem;
     &__item{
         padding: 1em;
         text-decoration: none;
@@ -71,3 +73,7 @@
 .nav-items-animation {
     animation: navItemsAnimation 1.5s both;
 }
+
+// 1. Poprawic wielkosc tekstu - media
+// 2. Schowac menu / widoczne od 768px
+// 3. Dodać strzałkę w dół
