@@ -14,7 +14,13 @@
 </head>
 
 <body>
-
+    <nav class="nav-desktop">
+        <div class="nav-desktop__items">
+            <a href="#menu" class="nav-desktop__item">Menu</a>
+            <a href="#about" class="nav-desktop__item">Opinie</a>
+            <a href="#contact" class="nav-desktop__item">Kontakt</a>
+        </div>
+    </nav>
     <button class="burger-btn">
         <div class="burger-btn__box">
             <div class="burger-btn__bars"></div>
@@ -24,26 +30,36 @@
     <nav class="nav">
         <div class="nav__items">
             <a href="#menu" class="nav__item">Menu</a>
-            <a href="#order" class="nav__item">Zamów</a>
             <a href="#about" class="nav__item">Opinie</a>
             <a href="#contact" class="nav__item">Kontakt</a>
         </div>
     </nav>
 
-    
+
     <hedaer class="header section">
-        <nav class="nav-desktop">
-            <div class="nav-desktop__items">
-                <a href="#menu" class="nav-desktop__item">Menu</a>
-                <a href="#order" class="nav-desktop__item">Zamów</a>
-                <a href="#about" class="nav-desktop__item">Opinie</a>
-                <a href="#contact" class="nav-desktop__item">Kontakt</a>
-            </div>
-        </nav>
         <h1 class="header__heading">Portova pizzabar</h1>
         <p class="header__text">Pizzeria Gdańsk - Nowy Port</p>
     </hedaer>
 
+    <main class="main">
+        <section class="menu section-padding section white-section" id="menu">
+            <div class="wrapper">
+                <h2 class="section-heading">Menu</h2>
+                <div class="menu__box">
+                    <div class="menu__box-img">
+                        <img src="./img/menu.jpg" alt="menu pizzerii" class="menu__img">
+                    </div>
+                    <div class="menu__box-text">
+                        <h3 class="menu__title">Wybierz to, na co masz ochotę i zamów</h3>
+                        <p class="menu__text">Dokładamy wszelkich starań, aby pizza była najlepsza, średni czas
+                            oczekiwania wynosi 15 minut</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
 </body>
 <script src="./js/main.js"></script>
+
 </html>

@@ -9,7 +9,7 @@
 	height: 100vh;
 	width: 100%;
 	transform: translateX(100%);
-	transition: .5s cubic-bezier(0.55, 0.085, 0.68, 0.53);
+	transition: 0.5s cubic-bezier(0.55, 0.085, 0.68, 0.53);
 	background-color: $main-color;
 	z-index: 100;
 
@@ -43,22 +43,28 @@
 	}
 }
 
-.nav-desktop{
-    position: absolute;
-    display: none;
-    top: 0;
-    padding: 2em;
-    right: 0;
-    font-size: 2rem;
-    &__item{
-        padding: 1em;
-        text-decoration: none;
-        color: $pure-white;
-        transition: color .3s;
-        &:hover{
-            color: $pure-white-hover;
-        }
-    }
+.nav-desktop {
+	// position: absolute;
+	position: sticky;
+	top: 0;
+	background-color: #283618;
+	width: 100%;
+	justify-content: flex-end;
+	display: none;
+	top: 0;
+	padding: 2em;
+	right: 0;
+	font-size: 2rem;
+	z-index: 1000;
+	&__item {
+		padding: 1em;
+		text-decoration: none;
+		color: $pure-white;
+		transition: color 0.3s;
+		&:hover {
+			color: $pure-white-hover;
+		}
+	}
 }
 
 @keyframes navItemsAnimation {
@@ -71,9 +77,6 @@
 }
 
 .nav-items-animation {
-    animation: navItemsAnimation 1.5s both;
+	animation: navItemsAnimation 1.5s both;
 }
 
-// 1. Poprawic wielkosc tekstu - media
-// 2. Schowac menu / widoczne od 768px
-// 3. Dodać strzałkę w dół

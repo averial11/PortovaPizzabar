@@ -1,0 +1,25 @@
+@use './colors' as *;
+
+.menu {
+	background-color: $main-color;
+	color: $pure-white;
+	h2 {
+		color: $pure-white;
+	}
+
+	&__img {
+		width: 100%;
+		border-radius: 8px;
+		object-fit: contain;
+	}
+    &__box-text{
+        text-align: center;
+        padding: 1em;
+    }
+	&__title {
+		margin-bottom: 0.5em;
+	}
+	&__text {
+		font-size: 1.4rem;
+	}
+}
