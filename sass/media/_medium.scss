@@ -6,8 +6,40 @@
 		top: 50px;
 		right: 50px;
 	}
-	.header{
-		background-image: $blue-gradient, url('/img/pizza-big.jpg');
+	.header {
+		@include heroImages('/img/pizza-big.jpg');
 	}
 
+	.contact {
+		&__info {
+			&-box {
+				line-height: 1.4;
+				font-size: 2.4rem;
+			}
+			&-hours {
+				&-order,
+				&-phone {
+					font-size: 2.6rem;
+					margin-bottom: 1.5em;
+					font-weight: bold;
+				}
+				&-sunday {
+					margin-bottom: 0.5em;
+				}
+				&-adress {
+					margin-top: 0.5em;
+				}
+			}
+		}
+
+		&__map {
+			iframe {
+				width: 700px;
+				height: 500px;
+			}
+		}
+	}
+	footer {
+        font-size: 1.6rem;
+    }
 }

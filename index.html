@@ -5,20 +5,23 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="./img/logo.png" type="image/png">
     <title>Portova pizzabar</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Serif:wght@300;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;700&display=swap" rel="stylesheet">
     <script src="https://kit.fontawesome.com/3400d0481a.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css" />
     <link rel="stylesheet" href="css/main.css">
 </head>
 
 <body>
-    <nav class="nav-desktop">
-        <div class="nav-desktop__items">
-            <a href="#menu" class="nav-desktop__item">Menu</a>
-            <a href="#about" class="nav-desktop__item">Opinie</a>
-            <a href="#contact" class="nav-desktop__item">Kontakt</a>
+
+    <nav class="nav-mobile">
+        <div class="nav-mobile__items">
+            <a href="#menu" class="nav-mobile__item">Menu</a>
+            <a href="#reviews" class="nav-mobile__item">Opinie</a>
+            <a href="#contact" class="nav-mobile__item">Kontakt</a>
         </div>
     </nav>
     <button class="burger-btn">
@@ -27,19 +30,33 @@
         </div>
     </button>
 
-    <nav class="nav">
-        <div class="nav__items">
-            <a href="#menu" class="nav__item">Menu</a>
-            <a href="#about" class="nav__item">Opinie</a>
-            <a href="#contact" class="nav__item">Kontakt</a>
-        </div>
-    </nav>
-
 
     <hedaer class="header section">
-        <h1 class="header__heading">Portova pizzabar</h1>
-        <p class="header__text">Pizzeria Gdańsk - Nowy Port</p>
+        <nav class="nav-desktop">
+            <div class="nav-desktop__items">
+                <a href="#menu" class="nav-desktop__item">Menu</a>
+                <a href="#reviews" class="nav-desktop__item">Opinie</a>
+                <a href="#contact" class="nav-desktop__item">Kontakt</a>
+            </div>
+
+            <div class="nav-desktop__items">
+                <a href="https://www.facebook.com/profile.php?id=100073902062395" class="nav-desktop__item"
+                    target="_blank"><i class="fa fa-facebook"></i></a>
+                <a href="https://www.instagram.com/portova_pizzabar/" class="nav-desktop__item" target="_blank"><i
+                        class="fa fa-instagram"></i></a>
+                <a href="https://www.google.com/maps/place/Portova+Pizza+Bar/@54.3996453,18.6698801,15z/data=!4m15!1m8!3m7!1s0x46fd0d9b39ca8135:0x4c35f6cc88dbfaa0!2sPortova+Pizza+Bar!8m2!3d54.3996453!4d18.6698801!10e1!16s%2Fg%2F11s9c_b4tr!3m5!1s0x46fd0d9b39ca8135:0x4c35f6cc88dbfaa0!8m2!3d54.3996453!4d18.6698801!16s%2Fg%2F11s9c_b4tr"
+                    class="nav-desktop__item" target="_blank"><i class="fa fa-compass"></i></a>
+            </div>
+        </nav>
+
+        <div class="header__box">
+
+            <h1 class="header__box-title">Portova pizzabar</h1>
+            <p class="header__box-text">Pizzeria Gdańsk - Nowy Port</p>
+        </div>
+
     </hedaer>
+
 
     <main class="main">
         <section class="menu section-padding section white-section" id="menu">
@@ -47,19 +64,100 @@
                 <h2 class="section-heading">Menu</h2>
                 <div class="menu__box">
                     <div class="menu__box-img">
-                        <img src="./img/menu.jpg" alt="menu pizzerii" class="menu__img">
+                        <img src="./img/menu.jpg" alt="menu pizzerii" class="menu__img" id="menuImg">
                     </div>
                     <div class="menu__box-text">
-                        <h3 class="menu__title">Wybierz to, na co masz ochotę i zamów</h3>
-                        <p class="menu__text">Dokładamy wszelkich starań, aby pizza była najlepsza, średni czas
-                            oczekiwania wynosi 15 minut</p>
+                        <p class="menu__img-text">Kliknij <a
+                                href="https://scontent-waw1-1.xx.fbcdn.net/v/t39.30808-6/308559400_194499106356824_3126425271560135389_n.jpg?_nc_cat=104&ccb=1-7&_nc_sid=19026a&_nc_ohc=mIl-j_Iqw9YAX94Y50f&_nc_ht=scontent-waw1-1.xx&oh=00_AfDEsoLizjbOtvueNMKst5drZv2-O3aPh5yNyW3kW6hMRw&oe=646C7FF2"
+                                target="_blank"><strong>tutaj</strong></a>, aby
+                            otworzyć menu w lepszej rozdzielczości</p>
                     </div>
                 </div>
             </div>
         </section>
+        <section class="reviews  section white-section" id="reviews">
+            <div class="wrapper">
+                <h2 class="section-heading">Opinie</h2>
+                <div class="reviews__boxes">
+                    <div class="reviews__box">
+                        <div class="reviews__info">
+                            <div class="reviews__box-img">
+                                <img src="./img/comment.png" alt="opinia">
+                            </div>
+
+                            <p class="reviews__box-text">Szkoda,że nie można przenieść pizzerii z obsługą do
+                                Wrocławia!!!
+                                Wasza pizza świetna.Zamówiłyśmy 2, dzieląc smaki na każdej połówce pizzy.
+                                Każdy wybrany rodzaj wyśmienity.
+                                Dobry nastrój i klimat tworzą właściciele.</p>
+                            <strong>Danuta</strong>
+                        </div>
+
+                    </div>
+
+
+                    <div class="reviews__box">
+                        <div class="reviews__box-img">
+                            <img src="./img/comment.png" alt="opinia">
+                        </div>
+                        <div class="reviews__info">
+
+                            <p class="reviews__box-text">Bardzo polecam to miejsce!!! Pizza z naczosami to jest coś na
+                                co czekałam całe życie. 😍 Ceny zachęcające i bardzo przytulnie w środku. Warto tu
+                                zajechać i pysznie zjeść , będziemy nie raz. </p>
+                            <strong>Amelia</strong>
+                        </div>
+
+                    </div>
+
+
+                    <div class="reviews__box">
+                        <div class="reviews__box-img">
+                            <img src="./img/comment.png" alt="opinia">
+                        </div>
+                        <div class="reviews__info">
+                            <p class="reviews__box-text">Przepyszna pizza, ciasto idealne, składniki bardzo dobrej
+                                jakości. Polecam na pewno tutaj wrócimy 😊</p>
+                            <strong>Kamila</strong>
+                        </div>
+                    </div>
+
+                </div>
+
+        </section>
+
+        <section class="contact  section white-section" id="contact">
+            <div class="wrapper">
+                <h2 class="section-heading">Kontakt</h2>
+                <div class="contact__info-container">
+
+                    <div class="contact__info-box">
+
+                        <div class="contact__info-hours">
+                            <div class="contact__info-hours-order">Zamów z odbiorem lub zjedz na miejscu.</div>
+                            <div class="contact__info-hours-week">Poniedziałek - Piątek: 12:30 - 21:00</div>
+                            <div class="contact__info-hours-saturday">Sobota: 12:30 - 22:00</div>
+                            <div class="contact__info-hours-sunday">Niedziela: 12:30 - 20:30</div>
+                            <div class="contact__info-hours-phone">Zadzwoń: <a href="tel:+48668-020-001">668-020-001</a></div>
+                            <div class="contact__info-hours-mail">portova.nowyport@gmail.com</div>
+                            <div class="contact__info-hours-adress">Gdańsk ul.Ks.Mariana Góreckiego 9</div>
+                        </div>
+                    </div>
+
+                    <div class="contact__map"><iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d9290.339897305535!2d18.6698801!3d54.3996453!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x46fd0d9b39ca8135%3A0x4c35f6cc88dbfaa0!2sPortova%20Pizza%20Bar!5e0!3m2!1spl!2spl!4v1684951574752!5m2!1spl!2spl" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe></div>
+
+                </div>
+            </div>
+        </section>
     </main>
+    <footer >&copy; <span id="currentYear"></span> Damian Jagodziński</footer>
 
 </body>
-<script src="./js/main.js"></script>
+
+<script type="text/javascript" src="//code.jquery.com/jquery-1.11.0.min.js"></script>
+<script type="text/javascript" src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+<script type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+<script src="js/slick.js"></script>
+<script src="js/main.js"></script>
 
 </html>

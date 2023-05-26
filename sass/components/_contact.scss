@@ -1,0 +1,61 @@
+@use './colors' as *;
+@use './mixins' as *;
+
+.contact {
+	background-color: $main-color;
+	color: $pure-white;
+	h2 {
+		color: $pure-white;
+	}
+	&__info {
+		&-container {
+			display: flex;
+			flex-direction: column;
+			padding-bottom: 1.4em;
+		}
+		&-box {
+			display: flex;
+			flex-direction: column;
+			justify-content: center;
+			align-items: center;
+			text-align: center;
+			line-height: 1.2;
+			font-size: 1.7rem;
+			padding: 1em;
+		}
+		&-hours {
+			&-order {
+				font-size: 2rem;
+				margin-bottom: 1.5em;
+				font-weight: bold;
+			}
+			&-sunday {
+				margin-bottom: 0.5em;
+			}
+			&-adress {
+				margin-top: 1.5em;
+			}
+			&-phone {
+				font-size: 2rem;
+				margin-top: 1.5em;
+				font-weight: bold;
+				a{
+					text-decoration: none;
+					color: $pure-white;
+				}
+			}
+		}
+	}
+
+	&__map {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		margin-top: 20px;
+
+		iframe {
+			width: 400px;
+			height: 300px;
+		}
+	}
+}

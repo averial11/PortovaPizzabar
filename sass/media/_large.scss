@@ -1,0 +1,36 @@
+@use '../components/colors' as *;
+
+@media (min-width: 1200px) { 
+    .contact {
+        &__info {
+            &-container {
+                flex-direction: row;
+                justify-content: space-around;
+            }
+            &-box {
+                font-size: 2.4rem;
+                padding: 1em;
+            }
+            &-hours {
+                &-order {
+                    font-size: 2.6rem;
+                }
+                &-phone {
+                    font-size: 2.6rem;
+                }
+            }
+        }
+    
+        &__map {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+    
+            iframe {
+                width: 600px;
+                height: 400px;
+            }
+        }
+    }
+    
+}

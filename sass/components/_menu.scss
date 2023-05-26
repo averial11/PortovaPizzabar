@@ -3,6 +3,8 @@
 .menu {
 	background-color: $main-color;
 	color: $pure-white;
+	overflow: hidden;
+	position: relative;
 	h2 {
 		color: $pure-white;
 	}
@@ -11,15 +13,34 @@
 		width: 100%;
 		border-radius: 8px;
 		object-fit: contain;
+		transition: transform 0.3s;
+		cursor: zoom-in;
+	
 	}
-    &__box-text{
-        text-align: center;
-        padding: 1em;
-    }
-	&__title {
-		margin-bottom: 0.5em;
+	.menu__img.zoomed {
+		transform: scale(1.2);
+		cursor: zoom-out;
 	}
-	&__text {
-		font-size: 1.4rem;
+	
+	&__box-text {
+		display: flex;
+		flex-direction: column;
+		text-align: center;
+		padding: 1em;
+	}
+
+	&__img-text {
+		color: $pure-white;
+		font-size: 2rem;
+		a {
+			text-decoration: none;
+			color: #dddc96;
+			&:hover {
+				cursor: pointer;
+				color: $pure-white-hover;
+				transition: color 0.3s;
+			}
+		}
 	}
 }
+

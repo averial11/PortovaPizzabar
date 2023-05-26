@@ -65,7 +65,7 @@ body {
           transition-delay: 0.1s;
 }
 
-.nav {
+.nav-mobile {
   position: fixed;
   top: 0;
   display: -webkit-box;
@@ -86,11 +86,11 @@ body {
   background-color: #283618;
   z-index: 100;
 }
-.nav--active {
+.nav-mobile--active {
   -webkit-transform: translateX(0);
           transform: translateX(0);
 }
-.nav__item {
+.nav-mobile__item {
   position: relative;
   display: block;
   color: #FEFAE0;
@@ -100,7 +100,7 @@ body {
   font-size: 2.8rem;
   text-decoration: none;
 }
-.nav__item::before {
+.nav-mobile__item::before {
   position: absolute;
   bottom: 0;
   left: 0;
@@ -115,25 +115,13 @@ body {
   transition: transform 0.3s, -webkit-transform 0.3s;
   content: "";
 }
-.nav__item:hover::before {
+.nav-mobile__item:hover::before {
   -webkit-transform: scaleX(1);
           transform: scaleX(1);
 }
 
 .nav-desktop {
-  position: sticky;
-  top: 0;
-  background-color: #283618;
-  width: 100%;
-  -webkit-box-pack: end;
-      -ms-flex-pack: end;
-          justify-content: flex-end;
   display: none;
-  top: 0;
-  padding: 2em;
-  right: 0;
-  font-size: 2rem;
-  z-index: 1000;
 }
 .nav-desktop__item {
   padding: 1em;
@@ -173,23 +161,12 @@ body {
 }
 
 .header {
-  position: relative;
-  top: 0;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  padding: 2em;
+  position: relative;
   height: 100vh;
+  padding: 2em;
   text-align: center;
   color: #FEFAE0;
   background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.719))), url("/img/pizza-sm.jpg");
@@ -198,12 +175,32 @@ body {
   background-position: center;
   background-attachment: fixed;
 }
-.header__heading {
-  font-family: "IBM Plex Serif", sans-serif;
-  font-size: 4.8rem;
+.header__box {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
-.header__text {
-  font-size: 2rem;
+.header__box-title {
+  font-size: 4.8rem;
+  margin-bottom: 0.5em;
+}
+.header__box-text {
+  font-size: 2.4rem;
   font-weight: 300;
 }
 
@@ -231,6 +228,8 @@ body {
 .menu {
   background-color: #283618;
   color: #FEFAE0;
+  overflow: hidden;
+  position: relative;
 }
 .menu h2 {
   color: #FEFAE0;
@@ -240,16 +239,176 @@ body {
   border-radius: 8px;
   -o-object-fit: contain;
      object-fit: contain;
+  -webkit-transition: -webkit-transform 0.3s;
+  transition: -webkit-transform 0.3s;
+  transition: transform 0.3s;
+  transition: transform 0.3s, -webkit-transform 0.3s;
+  cursor: -webkit-zoom-in;
+  cursor: zoom-in;
+}
+.menu .menu__img.zoomed {
+  -webkit-transform: scale(1.2);
+          transform: scale(1.2);
+  cursor: -webkit-zoom-out;
+  cursor: zoom-out;
 }
 .menu__box-text {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
   text-align: center;
   padding: 1em;
 }
-.menu__title {
+.menu__img-text {
+  color: #FEFAE0;
+  font-size: 2rem;
+}
+.menu__img-text a {
+  text-decoration: none;
+  color: #dddc96;
+}
+.menu__img-text a:hover {
+  cursor: pointer;
+  color: #c9c6b3;
+  -webkit-transition: color 0.3s;
+  transition: color 0.3s;
+}
+
+@media (max-width: 767px) {
+  .reviews.section-padding {
+    padding: 6em 0;
+  }
+}
+.reviews {
+  background-color: #283618;
+  color: #FEFAE0;
+}
+.reviews h2 {
+  color: #FEFAE0;
+}
+.reviews__box {
+  position: relative;
+  margin: 2.2em;
+  padding: 2em;
+  border-radius: 8px;
+  -webkit-box-shadow: 3px 3px 10px rgba(46, 46, 46, 0.1803921569);
+          box-shadow: 3px 3px 10px rgba(46, 46, 46, 0.1803921569);
+  -webkit-transition: -webkit-transform 0.3s;
+  transition: -webkit-transform 0.3s;
+  transition: transform 0.3s;
+  transition: transform 0.3s, -webkit-transform 0.3s;
+  border: 3px #dddc96 solid;
+  background-color: white;
+  line-height: 1.5;
+  color: black;
+}
+.reviews__box:hover {
+  -webkit-transform: scale(0.95);
+          transform: scale(0.95);
+}
+.reviews__box-img {
+  position: absolute;
+  top: 3%;
+  left: 75%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+}
+.reviews__box-img img {
+  width: 50px;
+  height: 50px;
+  -o-object-fit: cover;
+     object-fit: cover;
+  border-radius: 50%;
+  margin-bottom: 2em;
+}
+.reviews__box-text {
+  margin-bottom: 1em;
+  font-size: 1.7rem;
+}
+
+.contact {
+  background-color: #283618;
+  color: #FEFAE0;
+}
+.contact h2 {
+  color: #FEFAE0;
+}
+.contact__info-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  padding-bottom: 1.4em;
+}
+.contact__info-box {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  text-align: center;
+  line-height: 1.2;
+  font-size: 1.7rem;
+  padding: 1em;
+}
+.contact__info-hours-order {
+  font-size: 2rem;
+  margin-bottom: 1.5em;
+  font-weight: bold;
+}
+.contact__info-hours-sunday {
   margin-bottom: 0.5em;
 }
-.menu__text {
-  font-size: 1.4rem;
+.contact__info-hours-adress {
+  margin-top: 1.5em;
+}
+.contact__info-hours-phone {
+  font-size: 2rem;
+  margin-top: 1.5em;
+  font-weight: bold;
+}
+.contact__info-hours-phone a {
+  text-decoration: none;
+  color: #FEFAE0;
+}
+.contact__map {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-top: 20px;
+}
+.contact__map iframe {
+  width: 400px;
+  height: 300px;
+}
+
+footer {
+  text-align: center;
+  padding: 1.2em;
+  background-color: rgb(0, 0, 0);
+  color: #FEFAE0;
+  font-size: 1.2rem;
 }
 
 @media (min-width: 768px) {
@@ -257,15 +416,41 @@ body {
     display: none;
   }
   .nav-desktop {
+    position: fixed;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
+    top: 0;
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
+    background-color: rgba(0, 0, 0, 0.6980392157);
+    width: 100vw;
+    padding: 2em;
+    right: 0;
+    z-index: 2000;
+    font-size: 2rem;
   }
-  .header__heading {
+  .header__box-title {
     font-size: 6.6rem;
   }
-  .header__text {
+  .header__box-text {
     font-size: 2.2rem;
+  }
+  .contact__info-box {
+    font-size: 2.4rem;
+  }
+  .contact__info-hours-order {
+    font-size: 2.2rem;
+  }
+  .contact__info-hours-phone {
+    font-size: 2.4rem;
+  }
+  .contact__map iframe {
+    width: 600px;
+    height: 500px;
+  }
+  footer {
+    font-size: 1.4rem;
   }
 }
 @media (min-width: 992px) {
@@ -276,5 +461,65 @@ body {
   .header {
     background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.719))), url("/img/pizza-big.jpg");
     background-image: linear-gradient(rgba(0, 0, 0, 0.719)), url("/img/pizza-big.jpg");
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+  }
+  .contact__info-box {
+    line-height: 1.4;
+    font-size: 2.4rem;
+  }
+  .contact__info-hours-order, .contact__info-hours-phone {
+    font-size: 2.6rem;
+    margin-bottom: 1.5em;
+    font-weight: bold;
+  }
+  .contact__info-hours-sunday {
+    margin-bottom: 0.5em;
+  }
+  .contact__info-hours-adress {
+    margin-top: 0.5em;
+  }
+  .contact__map iframe {
+    width: 700px;
+    height: 500px;
+  }
+  footer {
+    font-size: 1.6rem;
+  }
+}
+@media (min-width: 1200px) {
+  .contact__info-container {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
+  }
+  .contact__info-box {
+    font-size: 2.4rem;
+    padding: 1em;
+  }
+  .contact__info-hours-order {
+    font-size: 2.6rem;
+  }
+  .contact__info-hours-phone {
+    font-size: 2.6rem;
+  }
+  .contact__map {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .contact__map iframe {
+    width: 600px;
+    height: 400px;
   }
 }/*# sourceMappingURL=main.css.map */
