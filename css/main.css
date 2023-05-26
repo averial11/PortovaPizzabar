@@ -169,7 +169,7 @@ body {
   padding: 2em;
   text-align: center;
   color: #FEFAE0;
-  background-image: url("/img/pizza-sm.jpg");
+  background-image: url("https://averial11.github.io/PortovaPizzabar/img/pizza-sm.jpg");
   background-size: cover;
   background-position: center;
   background-attachment: fixed;
@@ -468,7 +468,7 @@ footer {
     right: 50px;
   }
   .header {
-    background-image: url("/img/pizza-big.jpg");
+    background-image: url("https://averial11.github.io/PortovaPizzabar/img/pizza-big.jpg");
   }
   .contact__info-box {
     line-height: 1.4;
