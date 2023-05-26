@@ -1,5 +1,4 @@
 @use '../components/colors' as *;
-@use '../components/mixins' as *;
 
 @media (min-width: 992px) {
 	.burger-btn {
@@ -7,7 +6,7 @@
 		right: 50px;
 	}
 	.header {
-		@include heroImages('/img/pizza-big.jpg');
+		background-image: url("/img/pizza-big.jpg");
 	}
 
 	.contact {
