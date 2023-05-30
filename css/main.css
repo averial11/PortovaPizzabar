@@ -260,20 +260,6 @@ body {
   text-align: center;
   padding: 1em;
 }
-.menu__img-text {
-  color: #FEFAE0;
-  font-size: 2rem;
-}
-.menu__img-text a {
-  text-decoration: none;
-  color: #dddc96;
-}
-.menu__img-text a:hover {
-  cursor: pointer;
-  color: #c9c6b3;
-  -webkit-transition: color 0.3s;
-  transition: color 0.3s;
-}
 
 @media (max-width: 767px) {
   .reviews.section-padding {
