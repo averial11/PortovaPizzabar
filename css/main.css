@@ -213,11 +213,6 @@ body {
   font-weight: 300;
 }
 
-@media (min-width: 992px) {
-  .header {
-    background-image: url("../img/pizza-big.jpg");
-  }
-}
 .wrapper {
   margin: 0 auto;
   width: 100%;
@@ -456,9 +451,8 @@ footer {
   }
 }
 @media (min-width: 992px) {
-  .burger-btn {
-    top: 50px;
-    right: 50px;
+  .header {
+    background-image: url("../img/pizza-big.jpg");
   }
   .contact__info-box {
     line-height: 1.4;
