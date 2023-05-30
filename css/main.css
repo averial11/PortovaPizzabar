@@ -169,7 +169,7 @@ body {
   padding: 2em;
   text-align: center;
   color: #FEFAE0;
-  background-image: url("./img/pizza-sm.jpg");
+  background-image: url("../img/pizza-sm.jpg");
   background-size: cover;
   background-position: center;
   background-attachment: fixed;
