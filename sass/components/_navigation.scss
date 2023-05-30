@@ -11,7 +11,7 @@
 	transform: translateX(100%);
 	transition: 0.5s cubic-bezier(0.55, 0.085, 0.68, 0.53);
 	background-color: $main-color;
-	z-index: 100;
+	z-index: 1000;
 
 	&--active {
 		transform: translateX(0);

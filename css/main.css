@@ -84,7 +84,7 @@ body {
   -webkit-transition: 0.5s cubic-bezier(0.55, 0.085, 0.68, 0.53);
   transition: 0.5s cubic-bezier(0.55, 0.085, 0.68, 0.53);
   background-color: #283618;
-  z-index: 100;
+  z-index: 1000;
 }
 .nav-mobile--active {
   -webkit-transform: translateX(0);
@@ -169,7 +169,7 @@ body {
   padding: 2em;
   text-align: center;
   color: #FEFAE0;
-  background-image: url("https://averial11.github.io/PortovaPizzabar/img/pizza-sm.jpg");
+  background-image: url("/img/pizza-sm.jpg");
   background-size: cover;
   background-position: center;
   background-attachment: fixed;
@@ -202,7 +202,7 @@ body {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  z-index: 1000;
+  z-index: 5;
 }
 .header__box-title {
   font-size: 4.8rem;
@@ -468,7 +468,7 @@ footer {
     right: 50px;
   }
   .header {
-    background-image: url("https://averial11.github.io/PortovaPizzabar/img/pizza-big.jpg");
+    background-image: url("/img/pizza-big.jpg");
   }
   .contact__info-box {
     line-height: 1.4;
