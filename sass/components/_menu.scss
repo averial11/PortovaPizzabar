@@ -13,13 +13,8 @@
 		width: 100%;
 		border-radius: 8px;
 		object-fit: contain;
-		transition: transform 0.3s;
-		cursor: zoom-in;
+
 	
-	}
-	.menu__img.zoomed {
-		transform: scale(1.2);
-		cursor: zoom-out;
 	}
 	
 	&__box-text {
