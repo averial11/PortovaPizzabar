@@ -10,7 +10,8 @@
     background-size: cover;
 	background-repeat: no-repeat;
     background-attachment: fixed;
-	background-image: url("../img/pizza-big.jpg");
+	// background-image: url("../img/pizza-big.jpg");
+	background: url("../img/pizza-big.jpg");
 	&::after, &::before {
 		content: '';
 		position: absolute;
