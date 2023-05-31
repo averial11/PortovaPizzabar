@@ -169,7 +169,6 @@ body {
   padding: 2em;
   text-align: center;
   color: #FEFAE0;
-  background-size: cover;
   background-position: center;
   background-attachment: fixed;
   background-image: url("../img/pizza-sm.jpg");
@@ -235,10 +234,10 @@ body {
 }
 
 .menu {
+  position: relative;
   background-color: #283618;
   color: #FEFAE0;
   overflow: hidden;
-  position: relative;
 }
 .menu h2 {
   color: #FEFAE0;
