@@ -8,8 +8,9 @@
 	text-align: center;
 	color: $pure-white;
 	background-repeat: no-repeat;
-	background: url("../img/pizza-big.jpg") center no-repeat;
-	&::after, &::before {
+	background: url('../img/pizza2.jpg') center no-repeat;
+	&::after,
+	&::before {
 		content: '';
 		position: absolute;
 		top: 0;
@@ -28,14 +29,22 @@
 		align-items: center;
 		justify-content: center;
 		z-index: 5;
-	}
-	&__box-title {
-		font-size: 4.8rem;
-		margin-bottom: .5em;
-	}
-	&__box-text {
-		font-size: 2.4rem;
-		font-weight: 300;
+		&-title {
+			font-size: 4.8rem;
+			margin-bottom: 0.5em;
+		}
+		&-text {
+			font-size: 2.4rem;
+			font-weight: 300;
+		}
+		&-phone {
+			margin-top: 1em;
+			font-size: 2.4rem;
+			font-weight: 300;
+			a {
+				text-decoration: none;
+				color: $pure-white;
+			}
+		}
 	}
 }
-

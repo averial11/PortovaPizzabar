@@ -1,9 +1,6 @@
 @use '../components/colors' as *;
 
 @media (min-width: 992px) {
-	.header {
-		background: url("../img/pizza-big.jpg");
-	}
 
 	.contact {
 		&__info {

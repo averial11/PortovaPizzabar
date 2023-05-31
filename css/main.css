@@ -170,7 +170,7 @@ body {
   text-align: center;
   color: #FEFAE0;
   background-repeat: no-repeat;
-  background: url("../img/pizza-big.jpg") center no-repeat;
+  background: url("../img/pizza2.jpg") center no-repeat;
 }
 .header::after, .header::before {
   content: "";
@@ -209,6 +209,15 @@ body {
 .header__box-text {
   font-size: 2.4rem;
   font-weight: 300;
+}
+.header__box-phone {
+  margin-top: 1em;
+  font-size: 2.4rem;
+  font-weight: 300;
+}
+.header__box-phone a {
+  text-decoration: none;
+  color: #FEFAE0;
 }
 
 .wrapper {
@@ -435,9 +444,6 @@ footer {
   }
 }
 @media (min-width: 992px) {
-  .header {
-    background: url("../img/pizza-big.jpg");
-  }
   .contact__info-box {
     line-height: 1.4;
     font-size: 2.4rem;
