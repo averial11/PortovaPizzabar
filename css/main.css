@@ -169,6 +169,7 @@ body {
   padding: 2em;
   text-align: center;
   color: #FEFAE0;
+  background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
   background-attachment: fixed;
@@ -215,7 +216,7 @@ body {
 
 @media (max-width: 768px) {
   .header {
-    background-size: contain;
+    background-position: center center;
   }
 }
 .wrapper {

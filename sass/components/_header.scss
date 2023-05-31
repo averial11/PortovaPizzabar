@@ -7,7 +7,7 @@
 	padding: 2em;
 	text-align: center;
 	color: $pure-white;
-    // background-size: cover;
+    background-size: cover;
 	background-repeat: no-repeat;
     background-position: center;
     background-attachment: fixed;
@@ -43,7 +43,8 @@
 }
 @media (max-width: 768px) {
 	.header {
-	  background-size: contain;
+	//   background-size: cover;
+	  background-position: center center;
 	}
   }
 
