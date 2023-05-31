@@ -1,6 +1,15 @@
 @use '../components/colors' as *;
 
 @media (min-width: 992px) {
+	
+.header {
+	&__box {
+		&-text,	&-phone {
+			font-size: 2.8rem;
+		}
+	}
+}
+
 
 	.contact {
 		&__info {
