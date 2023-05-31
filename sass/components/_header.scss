@@ -7,9 +7,9 @@
 	padding: 2em;
 	text-align: center;
 	color: $pure-white;
-    background-size:cover;
+    // background-size: cover;
 	background-repeat: no-repeat;
-    // background-position: ;
+    background-position: center;
     background-attachment: fixed;
 	background-image: url("../img/pizza-sm.jpg");
 	&::after, &::before {
@@ -41,4 +41,9 @@
 		font-weight: 300;
 	}
 }
+@media (max-width: 768px) {
+	.header {
+	  background-size: contain;
+	}
+  }
 
