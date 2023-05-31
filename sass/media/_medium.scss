@@ -1,9 +1,9 @@
 @use '../components/colors' as *;
 
 @media (min-width: 992px) {
-	// .header {
-	// 	background-image: url("../img/pizza-big.jpg");
-	// }
+	.header {
+		background: url("../img/pizza-big.jpg");
+	}
 
 	.contact {
 		&__info {
